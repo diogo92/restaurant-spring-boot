@@ -1,6 +1,5 @@
 package com.example.restaurant.services;
 
-import com.example.restaurant.controllers.BookingController;
 import com.example.restaurant.exceptions.NoFreeTablesException;
 import com.example.restaurant.exceptions.service.BookingServiceException;
 import com.example.restaurant.model.Booking;
@@ -105,11 +104,11 @@ public class BookingServiceTests {
         bookingService.bookTable(new Booking(localDateTime, 7));
         bookingService.bookTable(new Booking(localDateTime, 7));
         bookingService.bookTable(new Booking(localDateTime.plusHours((long) 1.5), 6));
-        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 1.5), 7));;
-        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 1.5), 7));;
-        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 4.5), 7));;
-        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 4.5), 7));;
-        bookingService.bookTable(new Booking(localDateTime.plusHours(3), 7));;
+        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 1.5), 7));
+        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 1.5), 7));
+        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 4.5), 7));
+        bookingService.bookTable(new Booking(localDateTime.plusHours((long) 4.5), 7));
+        bookingService.bookTable(new Booking(localDateTime.plusHours(3), 7));
 
 
         assertEquals(9,bookingRepository.findAll().size());

@@ -6,11 +6,11 @@ import java.time.LocalDateTime;
 import java.util.List;
 
 public interface BookingService {
-    public Booking bookTable(Booking bookingRequest);
+    Booking bookTable(Booking bookingRequest);
 
-    public List<Booking> getAllBookings();
+    List<Booking> getAllBookings();
 
-    public List<Booking> getBookingsAtTime(LocalDateTime time);
+    List<Booking> getBookingsAtTime(LocalDateTime time);
 
-    public List<Booking> getScheduledBookings();
+    List<Booking> getScheduledBookings();
 }

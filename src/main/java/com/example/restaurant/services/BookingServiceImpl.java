@@ -6,11 +6,9 @@ import com.example.restaurant.model.RestaurantTable;
 import com.example.restaurant.repositories.BookingRepository;
 import com.example.restaurant.repositories.TableRepository;
 import com.example.restaurant.rules.BookingRulesFactory;
-import org.jeasy.rules.core.DefaultRulesEngine;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;

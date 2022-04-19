@@ -1,6 +1,6 @@
 package com.example.restaurant.model;
 
-import lombok.*;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
