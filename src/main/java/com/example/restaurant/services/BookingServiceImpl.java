@@ -44,12 +44,13 @@ public class BookingServiceImpl implements BookingService {
            List<RestaurantTable> tablesToBook = getTablesForBooking(bookingRequest.getNumOfPeople(), tables);
            booking.setTables(tablesToBook);
            booking.setTime(bookingRequest.getTime());
+           booking.setNumOfPeople(bookingRequest.getNumOfPeople());
            bookingRepository.save(booking);
         }
         else {
             throw new NoFreeTablesException();
         }
-        return null;
+        return booking;
     }
 
     @Override

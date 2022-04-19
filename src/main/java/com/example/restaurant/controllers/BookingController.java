@@ -16,6 +16,7 @@ import java.util.stream.Collectors;
 @RequestMapping("/bookingService")
 public class BookingController {
 
+
     @Autowired
     private ModelMapper modelMapper;
 
@@ -35,7 +36,10 @@ public class BookingController {
     @PostMapping("/bookings/addBooking")
     public ResponseEntity<BookingDTO> bookTable(@RequestBody BookingDTO bookingDto) {
         // convert DTO to entity
+
+        System.out.println(bookingDto);
         Booking bookingRequest = modelMapper.map(bookingDto, Booking.class);
+        System.out.println(bookingRequest);
         Booking booking = service.bookTable(bookingRequest);
 
         // convert entity to DTO

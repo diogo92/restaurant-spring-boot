@@ -11,4 +11,5 @@ public class BookingDTO {
     private Long id;
     private LocalDateTime time;
     private List<RestaurantTable> tables;
+    private int numOfPeople;
 }
